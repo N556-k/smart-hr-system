@@ -22,3 +22,17 @@ A simple and user-friendly Human Resource Management System (HRMS) built with **
 
 1. Clone the repository:
 
+
+2. Install the required libraries:
+
+
+3. Run the app:
+
+4. Open your browser and go to:
+
+## 📁 Project Structure
+
+
+## 📌 Author
+
+Built with ❤️ by **Noura**
