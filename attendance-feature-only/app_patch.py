@@ -43,3 +43,5 @@ def checkout(id):
         record.check_out = datetime.now()
         db.session.commit()
     return redirect(url_for('index'))
+from datetime import datetime
+
