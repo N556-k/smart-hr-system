@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart HR System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <h1 class="text-primary mb-4">Smart HR System</h1>
+
+    <form action="/add" method="POST" class="row g-3 bg-white p-4 rounded shadow-sm mb-5">
+        <div class="col-md-4">
+            <input type="text" name="name" class="form-control" placeholder="Employee Name" required>
+        </div>
+        <div class="col-md-4">
+            <input type="text" name="department" class="form-control" placeholder="Department" required>
+        </div>
+        <div class="col-md-3">
+            <input type="number" name="salary" class="form-control" placeholder="Salary" required>
+        </div>
+        <div class="col-md-1">
+            <button type="submit" class="btn btn-success w-100">Add</button>
+        </div>
+    </form>
+
+    <table class="table table-bordered bg-white shadow-sm">
+        <thead class="table-secondary">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for emp in employees %}
+            <tr>
+                <td>{{ emp.id }}</td>
+                <td>{{ emp.name }}</td>
+                <td>{{ emp.department }}</td>
+                <td>{{ emp.salary }}</td>
+                <td><a href="/delete/{{ emp.id }}" class="btn btn-danger btn-sm">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
